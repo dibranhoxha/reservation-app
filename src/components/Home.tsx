@@ -1,5 +1,4 @@
 import React from "react";
-import { usePromiseGetAll } from "../hooks/usePromise";
 import { Company, Timeslot, GroupedTimeSlots } from "../types/index";
 import CompanyCard from "./CompanyCard";
 import SelectedTimeCard from "./SelectedTimeCard";
@@ -30,18 +29,6 @@ const sortTimeSlots = (time_slots: Timeslot[]) => {
 
 const Home = () => {
   const { data = [], isLoading: companiesLoading } = useGetCompaniesQuery();
-
-  // const companiesConfig = {
-  //   initialData: {
-  //     data: [],
-  //   },
-  // };
-
-  // const { data, isFetching: companiesLoading } = usePromiseGetAll(
-  //   "companies",
-  //   `${api}/companies`,
-  //   companiesConfig
-  // );
 
   let timeSlots: GroupedTimeSlots;
 
