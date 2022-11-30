@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "npx json-server --watch public/time_slots.json"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
